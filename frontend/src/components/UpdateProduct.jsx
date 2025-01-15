@@ -19,7 +19,7 @@ function UpdateProduct() {
           .get(`https://productapplication.onrender.com/api/singleProduct/${productId}`)
           .then(res => {
               setShowMessage({success: true, message: "Product fetched successfully"})
-              setProduct({ name : product.name, price : product.price, description: product.description, category: product.category })
+              setProduct({ name: res.data.data.name, price: res.data.data.price, description: res.data.data.description, category: res.data.data.category })
           })
           .catch(error => {
             console.log(error)
