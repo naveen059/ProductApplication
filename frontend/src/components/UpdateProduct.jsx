@@ -16,7 +16,7 @@ function UpdateProduct() {
   useEffect(() => {
     const fetchProduct = async (e) => {
           await axios
-          .get(`https://productapplication.onrender.com/api/singleProduct/${productId}`)
+          .get(`https://product-backend-yxxe.onrender.com/api/singleProduct/${productId}`)
           .then(res => {
               setShowMessage({success: true, message: "Product fetched successfully"})
               setProduct({ name: res.data.data.name, price: res.data.data.price, description: res.data.data.description, category: res.data.data.category })
@@ -47,7 +47,7 @@ function UpdateProduct() {
     e.preventDefault();
 
     await axios
-          .put(`https://productapplication.onrender.com/api/updateProduct/${productId}`, product)
+          .put(`https://product-backend-yxxe.onrender.com/api/updateProduct/${productId}`, product)
           .then(res => {
               console.log(res.data.data)
 
