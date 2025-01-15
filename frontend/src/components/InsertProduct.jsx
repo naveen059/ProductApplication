@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function InsertProduct() {
 
@@ -7,7 +8,7 @@ function InsertProduct() {
 
   const [showMessage, setShowMessage] = useState({success: false,  message: ""})
 
-
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -26,6 +27,12 @@ function InsertProduct() {
               setShowMessage({success: true, message: "Inserted successfully"})
 
               setProduct({ name : "", price : 0, description: "", category: "" })
+
+            setTimeout(() => {
+                navigate('/table')
+            }, 3000);
+
+              
           })
           .catch(error => {
             console.log(error)
