@@ -10,7 +10,7 @@ function Login() {
 
         try{
 
-            const response = await axios.post("https://productapplication.onrender.com/api/users/login", {email, password});
+            const response = await axios.post("https://product-backend-yxxe.onrender.com/api/users/login", {email, password});
 
             alert(response.data.message);
 
