@@ -22,7 +22,6 @@ function ViewProducts() {
   }, []);
 
   return (
-  <>
     <div className="container mt-4">
       <h3 className="mb-4">Product List</h3>
       <div className="row">
@@ -52,13 +51,13 @@ function ViewProducts() {
               <span style={{fontSize: '48px'}}>+</span>
           </div>
         </div>
+        <div className="col-md-1 text-center mb-4">
+          <button className="btn btn-primary btn-sm p-3" onclick={(e) => navigate('/register')}>Register</button>
+        </div>
       </div>
     </div>
 
-    <div className="row">
-      <button className="btn btn-primary btn-sm p-3" onclick={() => navigate('/register')}>Register</button>
-    </div>
-  </>
+    
   );
 }
 
