@@ -22,6 +22,7 @@ function ViewProducts() {
   }, []);
 
   return (
+  <>
     <div className="container mt-4">
       <h3 className="mb-4">Product List</h3>
       <div className="row">
@@ -57,6 +58,7 @@ function ViewProducts() {
     <div className="row">
       <button className="btn btn-primary btn-sm p-3" onclick={() => navigate('/register')}>Register</button>
     </div>
+  </>
   );
 }
 
