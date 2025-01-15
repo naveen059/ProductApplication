@@ -53,6 +53,10 @@ function ViewProducts() {
         </div>
       </div>
     </div>
+
+    <div className="row">
+      <button className="btn btn-primary btn-sm p-3" onclick={() => navigate('/register')}>Register</button>
+    </div>
   );
 }
 
