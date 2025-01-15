@@ -13,7 +13,7 @@ function Register() {
         e.preventDefault();
 
         try{
-            const response = await axios.post("/api/users/register", {username, email, password})
+            const response = await axios.post("https://productapplication.onrender.com/api/users/register", {username, email, password})
 
             console.log(response.data.message);
 
