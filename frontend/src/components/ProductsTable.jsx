@@ -12,7 +12,7 @@ function ProductsTable() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("https://productapplication.onrender.com/api/allProducts");
+        const response = await axios.get("https://product-backend-yxxe.onrender.com/api/allProducts");
         setProducts(response.data.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -29,7 +29,7 @@ function ProductsTable() {
     console.log(status);
 
     if(status === "yes"){
-        await axios.delete(`https://productapplication.onrender.com/api/deleteProduct/${product_id}`)
+        await axios.delete(`https://product-backend-yxxe.onrender.com/api/deleteProduct/${product_id}`)
             .then(res => {
                 setProducts(products.filter((product) => product._id != product_id))
 
