@@ -20,7 +20,7 @@ function InsertProduct() {
     e.preventDefault();
 
     await axios
-          .post("https://productapplication.onrender.com/api/insertProduct", product)
+          .post("https://product-backend-yxxe.onrender.com//api/insertProduct", product)
           .then(res => {
               console.log(res.data.data)
 
