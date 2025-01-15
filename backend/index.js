@@ -30,7 +30,7 @@ mongoose
 
 //Insertion
 
-app.post('/api/insertProduct', async (req, res) => {
+app.post('https://productapplication.onrender.com/api/insertProduct', async (req, res) => {
     const product = req.body;
 
     if(!product.name || !product.price || !product.description || !product.category){
@@ -67,7 +67,7 @@ app.post('/api/insertProduct', async (req, res) => {
 
 //Getting all products
 
-app.get('/api/allProducts', async (req, res) => {
+app.get('https://productapplication.onrender.com/api/allProducts', async (req, res) => {
     try{
 
         const products = await Product.find({});
@@ -96,7 +96,7 @@ app.get('/api/allProducts', async (req, res) => {
 })
 
 
-app.get('/api/singleProduct/:id', async (req, res) => {
+app.get('https://productapplication.onrender.com/api/singleProduct/:id', async (req, res) => {
     try{
 
         const {id} = req.params;
@@ -130,7 +130,7 @@ app.get('/api/singleProduct/:id', async (req, res) => {
 //update a product
 
 
-app.put('/api/updateProduct/:id', async (req, res) => {
+app.put('https://productapplication.onrender.com/api/updateProduct/:id', async (req, res) => {
     const {id} = req.params;
 
     const product = req.body;
@@ -170,7 +170,7 @@ app.put('/api/updateProduct/:id', async (req, res) => {
 //delete the product
 
 
-app.delete('/api/deleteProduct/:id', async (req, res) => {
+app.delete('https://productapplication.onrender.com/api/deleteProduct/:id', async (req, res) => {
     const {id} = req.params;
 
     try{
@@ -198,7 +198,7 @@ app.delete('/api/deleteProduct/:id', async (req, res) => {
 })
 
 
-app.use("/api/users", userRoute);
+app.use("https://productapplication.onrender.com/api/users", userRoute);
 
 
 
