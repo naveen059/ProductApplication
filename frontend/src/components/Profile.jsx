@@ -11,7 +11,7 @@ function Profile() {
             const token = localStorage.getItem("token");
 
             try{
-                const response = await axios.get("/api/users/profile", {
+                const response = await axios.get("https://productapplication.onrender.com/api/users/profile", {
                     headers : {
                         "Authorization" : `Bearer ${token}`
                     }
