@@ -52,7 +52,7 @@ function ViewProducts() {
           </div>
         </div>
         <div className="col-md-1 text-center mb-4">
-          <button className="btn btn-primary btn-sm p-3" onclick={(e) => navigate('/register')}>Register</button>
+          <button className="btn btn-primary btn-sm p-3" onClick={(e) => navigate('/register')}>Register</button>
         </div>
       </div>
     </div>
