@@ -1,6 +1,4 @@
-```
 # MERN Stack Important Concepts  
-**Date:** Tuesday, January 21, 2025, 12 PM IST  
 
 ---
 
